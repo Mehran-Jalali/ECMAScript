@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random</title>
-  </head>
-  <body>
-    <h1>Your Random Number is : <%= rand %></h1>
-    <h2>
-      <% if(rand % 2 === 0){ %>
-      <h2>YOUR RANDOM NUMBER IS EVEN</h2>
-      <% }else{ %>
-      <h2>YOUR RANDOM NUMBER IS ODD</h2>
-      <% } %>
-    </h2>
-    <h6>Your weight is : <%= page%>KG</h6>
-    <h6>Your weight number is : <%= page%2===0 ? `EVEN` : `ODD` %></h6>
-  </body>
-</html>
+<%- include('partials/head') %> <%- include('partials/navbar') %>
+<h1>Your Random Number is : <%= rand %></h1>
+<h2>
+  <% if(rand % 2 === 0){ %>
+  <h2>YOUR RANDOM NUMBER IS EVEN</h2>
+  <% }else{ %>
+  <h2>YOUR RANDOM NUMBER IS ODD</h2>
+  <% } %>
+</h2>
+<h6>Your weight is : <%= page%>KG</h6>
+<h6>Your weight number is : <%= page%2===0 ? `EVEN` : `ODD` %></h6>
+<%- include('partials/footer') %>
